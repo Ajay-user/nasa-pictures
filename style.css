@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+  font-family: Nunito, sans-serif;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* loading animation */
+.loader {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navigation styles */
+.navigation-container {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px 10px 0.5px rgba(0, 0, 0, 0.1);
+  opacity: 0.4;
+}
+
+.navigation-items {
+  display: flex;
+  z-index: 5;
+}
+
+.clickable {
+  color: blue;
+  cursor: pointer;
+  user-select: none;
+}
+
+.clickable:hover {
+  color: deepskyblue;
+}
+
+.clickable:hover + .sep {
+  color: salmon;
+}
+
+/* display hidden */
+.hidden {
+  display: none;
+}
+
+/* card styles */
+.card-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+.image-container img,
+.image-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-body {
+  margin: 20px;
+}
+
+/* confirmation message */
+.confirmation {
+  font-size: 30px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: whitesmoke;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  box-shadow: 0px 1px 20px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 400px) {
+  /* cart style */
+  .card {
+    width: 90%;
+  }
+  /* confirmation message */
+  .confirmation {
+    font-size: 20px;
+  }
+}

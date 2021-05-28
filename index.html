@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <title>NASA API picture</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- loader -->
+      <div class="loader hidden" id="loader">
+        <img src="rocket.svg" alt="rocket" />
+      </div>
+
+      <!-- navigation -->
+      <div class="navigation-container">
+        <span class="navigation-items" id="resultsNav">
+          <h3 class="clickable" onclick="loadFav()">Favorites</h3>
+          <h3 class="sep">&nbsp;&nbsp;&nbsp; 🚀 &nbsp;&nbsp;&nbsp;</h3>
+          <h3 class="clickable" onclick="loadMore()">Load more</h3>
+        </span>
+        <span class="navigation-items hidden" id="favoritesNav">
+          <h3 class="clickable" onclick="loadMoreNasa()">
+            Load more NASA images
+          </h3>
+        </span>
+      </div>
+
+      <div class="card-container" id="card-container">
+        <!-- card -->
+        <!-- <div class="card">
+          <div class="image-container">
+            <a
+              href="https://apod.nasa.gov/apod/image/2105/TLEMay2021Kraus.jpg"
+              target="_blank"
+            >
+              <img
+                src="https://apod.nasa.gov/apod/image/2105/TLEMay2021Kraus.jpg"
+                alt="NASA IMAGE OF THE DAY"
+              />
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="title">Nasa image of the day</h5>
+            <p class="clickable">Add to favorites</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Perspiciatis modi numquam eum non ut facilis doloribus rerum in
+              molestiae iure? Repellendus distinctio, odit id repudiandae
+              necessitatibus nobis laboriosam cum harum! Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Consequuntur similique adipisci
+              rerum sequi, animi eius sunt corrupti? Pariatur mollitia ipsum
+              rerum praesentium ducimus, vitae quo quod neque laborum suscipit
+              assumenda.
+            </p>
+            <small><strong> 2021-5-27 </strong><span>copyright</span></small>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- confirmation message -->
+    <div class="confirmation" id="confirmation" hidden>
+      <!-- <h1>Added</h1> -->
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
