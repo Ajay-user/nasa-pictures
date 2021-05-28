@@ -50,6 +50,7 @@ const removeFromFavorites = (image) => {
     delete store[image.url];
     window.localStorage.setItem("NasaFav", JSON.stringify(store));
     confirmationMessage(`removed${"🔧"}`, "darksalmon");
+    // load a new set of images if store is empty
     Object.keys(store).length > 0 ? loadFav((scroll = false)) : loadMoreNasa();
     return;
   }
@@ -130,7 +131,7 @@ const toggleNavIcons = () => {
 
 // favorites
 const loadFav = (scroll = true) => {
-  toggleLoader();
+  toggleLoader(); //display loader
   const favs = getStore();
   imageArray = Object.values(favs);
   console.log("image array", imageArray);
@@ -147,7 +148,7 @@ const loadFav = (scroll = true) => {
     return;
   }
   confirmationMessage(`Empty${"☹️"}`);
-  toggleLoader();
+  toggleLoader(); // hide loader
 };
 
 // loads more images
