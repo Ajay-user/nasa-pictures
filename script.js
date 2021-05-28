@@ -132,8 +132,9 @@ const toggleNavIcons = () => {
 const loadFav = (scroll = true) => {
   toggleLoader();
   const favs = getStore();
-  if (favs) {
-    imageArray = Object.values(favs);
+  imageArray = Object.values(favs);
+  console.log("image array", imageArray);
+  if (imageArray.length > 0) {
     cardContainer.textContent = "";
     toggleNavIcons();
     updateDOM(imageArray, true);
@@ -146,6 +147,7 @@ const loadFav = (scroll = true) => {
     return;
   }
   confirmationMessage(`Empty${"☹️"}`);
+  toggleLoader();
 };
 
 // loads more images
