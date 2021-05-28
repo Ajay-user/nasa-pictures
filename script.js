@@ -50,7 +50,7 @@ const removeFromFavorites = (image) => {
     delete store[image.url];
     window.localStorage.setItem("NasaFav", JSON.stringify(store));
     confirmationMessage(`removed${"🔧"}`, "darksalmon");
-    loadFav((scroll = false));
+    Object.keys(store).length > 0 ? loadFav((scroll = false)) : loadMoreNasa();
     return;
   }
 };
